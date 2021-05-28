@@ -1,0 +1,182 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* 偶的程式碼從這開始 */
+/*
+* Noto Sans TC (Chinese_traditional) http://www.google.com/fonts/earlyaccess
+ */
+ 
+
+   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.container1{
+	width: 1200px;	
+	font-weight: bolder;
+	margin-left: auto;
+	margin-right: auto;
+}
+h1{
+	font-size: 80px;
+	line-height: 94px;
+	font-family: 'Roboto', sans-serif;
+	
+	padding-top: 80px;
+	padding-bottom: 50px;
+	border-bottom: 2px solid #000000;
+	margin-bottom: 32px;
+}
+img{
+	width: 324px;
+	height: 324px;
+}
+h2{
+	font-size: 32px;
+	line-height: 43px;
+	font-size: normal;
+	font-family: 'Noto Sans', sans-serif;
+
+	border-bottom: 1px solid black;
+	margin-bottom: 32px;
+	margin-top: 32px;
+}
+.H2en{
+	color: #A00404;
+	font-family: 'Roboto', sans-serif;
+	font-size: 24px;
+	line-height: 28px;
+}
+p{
+	font-size: 24px;
+	line-height: 36px;
+	font-family: 'Noto Sans', sans-serif;
+
+	margin-bottom: 24px;
+}
+/* .container2開始 */
+.container2{
+	background-color: #415165;
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+h3{
+	color: white;
+	font-size: 32px;
+	text-align: center;
+	line-height: 45px;
+	width: 900px;
+
+	border-bottom: white solid 1px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 32px;
+}
+.h3en{
+	font-size: 24px;
+	line-height: 28px;
+	font-family: 'Roboto', sans-serif;
+}
+.skill_menu{
+	text-align: left;
+
+	width: 200px;
+	padding-left: 20px;
+	/* padding-top: 0px; */
+	border-left: white 1px solid;
+
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	
+}
+.skill_menu li{
+	color: white;
+	font-size: 24px;
+	line-height: 36px;
+	font-family: 'Roboto', sans-serif;
+}
+
+
+.work_experience_menu{
+	border-left: 1px solid #96A9C4;
+	padding-left: 24px;
+	width: 1100px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.work_experience_menu li{
+	font-size: 24px;
+	line-height: 36px;
+	font-family: Noto Sans;
+	
+}
+.work_experience_menu img{
+	width: 90px;
+	height: 90px;
+}
+p{
+	font-size: 20px;
+	line-height: 30px;
+	font-family: 'Noto Sans', sans-serif;
+
+}
+
+.footer{
+	text-align: center;
+	color: white;
+	font-size: 24px;
+	line-height: 36px;
+	font-family: 'Roboto', sans-serif;
+}
+.footer img{
+	padding-top: 20px;
+	width: 48px;
+	height: 48px;
+}
