@@ -19,4 +19,5 @@
 您的 Slack 暱稱
 作業網址：請透過 Codepen 或 GitHub Pages 提交作業，以方便助教與講師檢視
 
+設計稿如下圖:
 <img src="設計稿.png">
