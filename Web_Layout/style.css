@@ -51,17 +51,22 @@ table {
 /*
 * Noto Sans TC (Chinese_traditional) http://www.google.com/fonts/earlyaccess
  */
- 
-
    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-.container1{
+/* 將段落p及li字型、字體大小統一在body設定 */
+body{
+	font-family: 'Noto Sans', sans-serif;
+	font-size: 24px;
+	line-height: 36px;
+}
+.container{
 	width: 1200px;	
 	font-weight: bolder;
-	margin-left: auto;
-	margin-right: auto;
+	/* 將margin改為一行 */
+	margin: 0px auto 0px auto;
 }
-h1{
+/* 將標籤選擇器(H2)改成類別選擇器name */
+.name{
 	font-size: 80px;
 	line-height: 94px;
 	font-family: 'Roboto', sans-serif;
@@ -71,41 +76,38 @@ h1{
 	border-bottom: 2px solid #000000;
 	margin-bottom: 32px;
 }
-img{
+/* 將img標籤改為標籤選擇器largePast */
+.largePast{
 	width: 324px;
 	height: 324px;
 }
-h2{
+.title{
 	font-size: 32px;
 	line-height: 43px;
 	font-size: normal;
-	font-family: 'Noto Sans', sans-serif;
 
 	border-bottom: 1px solid black;
-	margin-bottom: 32px;
-	margin-top: 32px;
+	margin: 32px 0 32px 0;
 }
-.H2en{
+.title span{
 	color: #A00404;
 	font-family: 'Roboto', sans-serif;
 	font-size: 24px;
 	line-height: 28px;
 }
 p{
-	font-size: 24px;
-	line-height: 36px;
-	font-family: 'Noto Sans', sans-serif;
-
 	margin-bottom: 24px;
+	font-size: 20px;
+	line-height: 30px;
 }
-/* .container2開始 */
-.container2{
+/* 將.container2改成有語意的.container_FullVersion開始 */
+.container_FullVersion{
 	background-color: #415165;
-	width: 100%;
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
-h3{
+/* 將標籤選擇器H3換成類別選擇器.titleInFullVersion */
+.titleInFullVersion{
 	color: white;
 	font-size: 32px;
 	text-align: center;
@@ -113,12 +115,9 @@ h3{
 	width: 900px;
 
 	border-bottom: white solid 1px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 32px;
+	margin: 0 auto 32px auto;
 }
-.h3en{
-	font-size: 24px;
+.titleInFullVersion span{
 	line-height: 28px;
 	font-family: 'Roboto', sans-serif;
 }
@@ -127,56 +126,48 @@ h3{
 
 	width: 200px;
 	padding-left: 20px;
-	/* padding-top: 0px; */
 	border-left: white 1px solid;
-
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 30px;
-	margin-bottom: 30px;
-	
+	/* 簡寫margin : 上右下左 */
+	margin: 30px auto 30px auto;	
 }
 .skill_menu li{
 	color: white;
-	font-size: 24px;
-	line-height: 36px;
 	font-family: 'Roboto', sans-serif;
 }
 
 
 .work_experience_menu{
+	width: 1100px;
+
 	border-left: 1px solid #96A9C4;
 	padding-left: 24px;
-	width: 1100px;
-	margin-left: auto;
-	margin-right: auto;
-}
-.work_experience_menu li{
-	font-size: 24px;
-	line-height: 36px;
-	font-family: Noto Sans;
-	
+	margin: 0px auto 0px auto;
 }
 .work_experience_menu img{
 	width: 90px;
 	height: 90px;
-}
-p{
-	font-size: 20px;
-	line-height: 30px;
-	font-family: 'Noto Sans', sans-serif;
-
+	display: block;
 }
 
-.footer{
+/* 將聯絡方式以ul>li方式連接 */
+.contactMethod{
 	text-align: center;
-	color: white;
-	font-size: 24px;
-	line-height: 36px;
-	font-family: 'Roboto', sans-serif;
 }
-.footer img{
+.contactMethod li{
+	display: inline;
+}
+.contactMethod img{
 	padding-top: 20px;
 	width: 48px;
 	height: 48px;
+}
+/* 增加超連結互動性 */
+.contactMethod img:hover{
+	width: 58px;
+	height: 58px;
+}
+.footer{
+	text-align: center;
+	color: white;
+	font-family: 'Roboto', sans-serif;
 }
