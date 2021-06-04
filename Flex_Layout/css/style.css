@@ -107,6 +107,15 @@ table {
 	font-weight: 600;
 	color: #3F5D45;
 }
+.mg-t-b-16{
+	margin: 16px 0;
+}
+.menu li{
+	border: 1px solid #EAF0ED;
+}
+.menu li:hover{
+	background-color: #EAF0ED;
+}
 .menu h2{
 	color:#FFF;
 	background-color: #3F5D45;
@@ -132,12 +141,17 @@ table {
 	line-height: 20px;
 }
 .buyBtn{
+	display: block;
 	font-size: 24px;
 	font-weight: 600;
 	text-align: center;
 	color: #3F5D45;
-	padding: 5px;
-	background: #EAF0ED
+	padding: 16px;
+	background-color: #EAF0ED;
+}
+.buyBtn:hover{
+	color:#EAF0ED;
+ 	background-color : #3F5D45;
 }
 
 .page{
@@ -147,21 +161,20 @@ table {
 	align-items: stretch;
 }
 .page li{
-	width: 60px;
-	height: 60px;
+	padding: 16px 24px;
 	border: 1px solid #EAF0ED;
 	color: #3F5D45;
 	
 }
-.page ul li img{
-	height: 24px;
-	width: 24px;
+.page li:hover{
+	color: white;
+	background-color:#3F5D45 ;
 }
+
 
 /* footer */
 
 .footer{
-	width: 1024px;
 	background-color: #EAF0ED ;
 	margin: 0 auto;
 	display: flex;
@@ -169,7 +182,7 @@ table {
 	
 }
 .footerLeft{
-	width: 400px;
+	width: 30%;
 	padding: 15px;
 
 	display: flex;
@@ -191,17 +204,17 @@ table {
 	display: flex; 
 }
 .footerRight{
+	color: #3F5D45;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	width: 50%;
+	width: 30%;
 	text-align: right;
 }
 .columnText{
 	-webkit-writing-mode: vertical-rl;
 	writing-mode: vertical-rl;
 	font-size: 24px;
-
 	margin: 30px 0;
 	text-align: right;
 }
