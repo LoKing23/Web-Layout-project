@@ -175,13 +175,36 @@ table {
 	display: flex;
 	flex-direction: column;
 }
-.contactLink li{
-	flex-direction: row;
+.contact ul li p{
+	color: #3F5D45;
+	font-size: 16px;
 }
-.contactLink{
+.mg-t-b{
+	margin: 39px 0 115px 0;
+}
+.contactLink li{
 	width: 32px;
 	height: 32px;
+	margin: 30px 8px;
+}
+.contactLink{
+	display: flex; 
 }
 .footerRight{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	width: 50%;
+	text-align: right;
+}
+.columnText{
+	-webkit-writing-mode: vertical-rl;
+	writing-mode: vertical-rl;
+	font-size: 24px;
+
+	margin: 30px 0;
+	text-align: right;
+}
+.mg-t-b-30{
+	margin: 30px 0;
 }
