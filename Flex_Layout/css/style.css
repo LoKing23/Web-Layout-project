@@ -71,6 +71,10 @@ table {
 	justify-content: space-between;
 	align-items:center;
 }
+.headerIcon li:hover{
+	color: white;
+	background-color: #3F5D45;
+}
 .headerIcon img{
 	width: 24px;
 	height: 24px;
@@ -128,8 +132,28 @@ table {
 	flex-wrap: wrap;
 }
 .products ul li{
+	position: relative;
 	margin-bottom: 20px; 
 	padding-left: 20px;
+}
+.z-i-0{
+	z-index: 0;
+}
+.favoriteBorder{
+	position: absolute;
+	top: 19px;
+	right: 22px; 		
+
+}
+.todayGood{
+	position: absolute;
+	top: 0;
+	left: 50px;
+	text-align: center;
+	color: #EAF0ED;
+	font-size: 16px;
+	padding: 16px 8px;
+	background-color: #3F5D45;
 }
 .productName{
 	display: flex;
@@ -214,9 +238,11 @@ table {
 .columnText{
 	-webkit-writing-mode: vertical-rl;
 	writing-mode: vertical-rl;
+	text-align: right;
+}
+.footerSlogan{
 	font-size: 24px;
 	margin: 30px 0;
-	text-align: right;
 }
 .mg-t-b-30{
 	margin: 30px 0;
