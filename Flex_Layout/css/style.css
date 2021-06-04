@@ -48,9 +48,9 @@ table {
 }
 
 /* start */
-	*{
+	/* *{
 		outline: 1px solid black;
-	}
+	} */
 /* header */
 .container{
 	width: 940px;
