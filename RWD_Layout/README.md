@@ -7,7 +7,7 @@
 
 + 設計稿與圖片操作教學
 可以用假圖產生器，Fake Image
-250*100 圖片範例：<img src="https://fakeimg.pl/250x100/">
+250*100 圖片範例：<img src="https://fakeimg.pl/350x200/?text=WaterBro">
 
 
 繳交任務內容需含以下二點
