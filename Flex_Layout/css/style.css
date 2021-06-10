@@ -1,0 +1,252 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* start */
+	/* *{
+		outline: 1px solid black;
+	} */
+/* header */
+.container{
+	width: 940px;
+	margin: 20px auto;
+}
+.header{
+    display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+    
+}
+.header img{
+    width: 210px;
+}
+.headerIcon{
+	width: 400px;
+	display: flex;
+	justify-content: space-between;
+	align-items:center;
+}
+.headerIcon li:hover{
+	color: white;
+	background-color: #3F5D45;
+}
+.headerIcon img{
+	width: 24px;
+	height: 24px;
+}
+.headerIcon ul{
+	width: 70%;
+	display: flex;
+	justify-content: space-between;	
+}
+.headerIcon ul li{
+	color: #3F5D45;
+	font-size: 16px;
+	font-weight: 600;
+}
+/* header */
+
+/* main */
+.main{
+	width: 940px;
+	margin: 0 auto;
+}
+.banner{
+	margin-bottom: 40px;
+}
+.productArea{
+	display: flex;
+	justify-content: space-between;
+}
+.menu{
+	width: 300px;
+	text-align: center;
+	font-size: 24px;
+	line-height: 40px;
+	font-weight: 600;
+	color: #3F5D45;
+}
+.mg-t-b-16{
+	margin: 16px 0;
+}
+.menu li{
+	border: 1px solid #EAF0ED;
+}
+.menu li:hover{
+	background-color: #EAF0ED;
+}
+.menu h2{
+	color:#FFF;
+	background-color: #3F5D45;
+}
+.products{
+	width: 640px;
+}
+.products ul{
+	display: flex;
+	flex-wrap: wrap;
+}
+.products ul li{
+	position: relative;
+	margin-bottom: 20px; 
+	padding-left: 20px;
+}
+.z-i-0{
+	z-index: 0;
+}
+.favoriteBorder{
+	position: absolute;
+	top: 19px;
+	right: 22px; 		
+
+}
+.todayGood{
+	position: absolute;
+	top: 0;
+	left: 50px;
+	text-align: center;
+	color: #EAF0ED;
+	font-size: 16px;
+	padding: 16px 8px;
+	background-color: #3F5D45;
+}
+.productName{
+	display: flex;
+	justify-content: space-between;
+	padding: 5px;
+
+	color: #3F5D45;
+	font-size: 20px;
+	line-height: 20px;
+}
+.buyBtn{
+	display: block;
+	font-size: 24px;
+	font-weight: 600;
+	text-align: center;
+	color: #3F5D45;
+	padding: 16px;
+	background-color: #EAF0ED;
+}
+.buyBtn:hover{
+	color:#EAF0ED;
+ 	background-color : #3F5D45;
+}
+
+.page{
+	display: flex;
+	justify-content: flex-end;
+	text-align: center;
+	align-items: stretch;
+}
+.page li{
+	padding: 16px 24px;
+	border: 1px solid #EAF0ED;
+	color: #3F5D45;
+	
+}
+.page li:hover{
+	color: white;
+	background-color:#3F5D45 ;
+}
+
+
+/* footer */
+
+.footer{
+	background-color: #EAF0ED ;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-evenly;
+	
+}
+.footerLeft{
+	width: 30%;
+	padding: 15px;
+
+	display: flex;
+	flex-direction: column;
+}
+.contact ul li p{
+	color: #3F5D45;
+	font-size: 16px;
+}
+.mg-t-b{
+	margin: 39px 0 115px 0;
+}
+.contactLink li{
+	width: 32px;
+	height: 32px;
+	margin: 30px 8px;
+}
+.contactLink{
+	display: flex; 
+}
+.footerRight{
+	color: #3F5D45;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 30%;
+	text-align: right;
+}
+.columnText{
+	-webkit-writing-mode: vertical-rl;
+	writing-mode: vertical-rl;
+}
+.footerSlogan{
+	font-size: 24px;
+	margin: 30px 0;
+	text-align: right;
+}
+.footerSlogan span{
+	text-indent: 32px;
+}
+.mg-t-b-30{
+	margin: 30px 0;
+}
