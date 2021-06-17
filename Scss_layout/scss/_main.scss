@@ -1,6 +1,86 @@
-.test{
-  color: palevioletred;
-  @include mobile{
-    color: #000;
+.container{
+  max-width: 1140px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+// header
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu{
+  color: $header_color;
+  display: flex;
+  justify-content: flex-end;
+  li{
+    padding-left: 32px;
+    display: flex;
   }
+  .menu_icon{
+    height: 20px;
+    padding-right: 4px;
+  }
+}
+.logoSize{
+  width: 128px;
+}
+.mobile_only{
+  display: none;
+  @include mobile{
+    display: block;
+  }
+}
+// banner
+.banner{
+  img{
+    position: relative;
+  }
+  .banner_text_area{
+    position: absolute;
+    top: 33%;
+    left: 55%;
+  }
+}
+.banner_text_area{
+  width: 445px;
+}
+// banner_text
+.banner_h1_text{
+  @include text(40px,60px);
+  color: $banner_color;
+  font-weight: 600;
+  @include mobile{
+    @include text(32px,48px);
+  }
+}
+.banner_p_text{
+  @include text(24px,36px);
+  color: $banner_color;
+  @include mobile{
+    @include text(20px,30px);
+  }
+}
+.btn-white{
+	@include ovalButton(28px,60px,#fff);
+}
+// main
+.main{
+  display: flex;
+  flex-direction: column;
+}
+// other
+.text-l{
+  @include text(24px,36px);
+}
+.text-m{
+  @include text(20px,30px);
+}
+.m-tb-9{
+  margin-top: 9px;
+  margin-bottom: 9px;
+}
+.mb-16{
+  margin-bottom: 16px;
 }

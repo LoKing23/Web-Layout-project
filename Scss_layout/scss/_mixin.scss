@@ -3,7 +3,16 @@
     @content;
   }
 }
-@mixin text($size,$height) {
-  font-size: $size;
-  line-height: $height;
+@mixin text($fontSize,$lineHeight) {
+  font-size: $fontSize;
+  line-height: $lineHeight;
+}
+@mixin ovalButton($fontSize,$lineHeight,$color) {
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  border: solid 2px $color;
+  color: #fff;
+  border-radius: $lineHeight/2;
+  text-align: center;
+  font-weight: 600;
 }
