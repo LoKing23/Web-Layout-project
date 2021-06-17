@@ -1,0 +1,6 @@
+.test{
+  color: palevioletred;
+  @include mobile{
+    color: #000;
+  }
+}

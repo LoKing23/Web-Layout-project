@@ -1,0 +1,9 @@
+@mixin mobile {
+  @media(max-width:  375px){
+    @content;
+  }
+}
+@mixin text($size,$height) {
+  font-size: $size;
+  line-height: $height;
+}

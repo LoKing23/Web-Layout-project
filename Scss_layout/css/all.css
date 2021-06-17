@@ -60,4 +60,14 @@ img {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+
+.test {
+  color: palevioletred;
+}
+
+@media (max-width: 375px) {
+  .test {
+    color: #000;
+  }
+}
 /*# sourceMappingURL=all.css.map */
