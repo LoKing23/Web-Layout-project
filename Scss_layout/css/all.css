@@ -177,14 +177,186 @@ img {
           flex-direction: column;
 }
 
-.text-l {
-  font-size: 24px;
-  line-height: 36px;
+.main ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
 }
 
-.text-m {
+.main .row-direction {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.main_img {
+  width: 555px;
+}
+
+.productIntroduction_text {
+  max-width: 350px;
+  margin: auto;
+}
+
+.productIntroduction_text ul li {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.productIntroduction_text h2 {
+  font-size: 32px;
+  line-height: 48px;
+  font-weight: 600;
+}
+
+.productIntroduction_text p {
   font-size: 20px;
   line-height: 30px;
+  margin-bottom: 16px;
+}
+
+.productIntroduction_text .more {
+  font-size: 16px;
+  line-height: 24px;
+  color: #AC8A46;
+  font-weight: 600;
+}
+
+.productIntroduction_text .detail_text {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.productIntroduction_text_step h3 {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.productIntroduction_text_step p {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 52px;
+}
+
+.productIntroduction_text_step .btn-black {
+  margin-top: 8px;
+  font-size: 20px;
+  line-height: 66px;
+  border: solid 2px #000;
+  color: #000;
+  border-radius: 33px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.container-gray {
+  background-color: #E0E0E0;
+}
+
+.productDisplay ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.productDisplay ul li {
+  padding: 40px 15px;
+}
+
+@media (max-width: 375px) {
+  .productDisplay ul li {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+.productCard img {
+  max-width: 350px;
+}
+
+.productCard h2 {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 600;
+}
+
+.productCard p {
+  font-size: 16px;
+  line-height: 24px;
+  padding-bottom: 16px;
+}
+
+@media (max-width: 375px) {
+  .productCard p {
+    padding-bottom: 4px;
+  }
+}
+
+.productCard p .not-discount {
+  padding-left: 8px;
+  color: #8D8D8D;
+  text-decoration: line-through;
+}
+
+.soldOutProduct {
+  max-width: 350px;
+  height: 540px;
+  background-image: url(../perfume-week6/index8.png);
+  background-size: 350px;
+}
+
+.soldOutProduct .black-mask {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.soldOutProduct .black-mask p {
+  font-size: 24px;
+  line-height: 540px;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+}
+
+.classicProduct_area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.classicProduct_area .classicProduct_img {
+  margin-right: 30px;
+}
+
+.classicProduct_area .productIntroduction_text {
+  margin: 82px 30px;
+}
+
+.classicProduct_img {
+  width: 730px;
+  height: 520px;
+  background-image: url(../perfume-week6/index9.jpg);
+  background-size: 730px;
 }
 
 .m-tb-9 {
@@ -194,5 +366,9 @@ img {
 
 .mb-16 {
   margin-bottom: 16px;
+}
+
+.mb-60 {
+  margin-bottom: 60px;
 }
 /*# sourceMappingURL=all.css.map */
