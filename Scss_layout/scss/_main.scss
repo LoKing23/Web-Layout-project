@@ -1,8 +1,16 @@
+*{
+  outline: 1px black solid;
+}
+a{
+  color:  $header_color;
+  text-decoration: none;
+}
 .container{
   max-width: 1140px;
   padding-left: 15px;
   padding-right: 15px;
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
 }
 // header
 .header{
@@ -10,18 +18,42 @@
   justify-content: space-between;
   align-items: center;
 }
-.menu{
-  color: $header_color;
+.fuckyoubitch{
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   li{
-    padding-left: 32px;
-    display: flex;
+    a{
+      padding-left: 32px;
+      display: flex;
+      p{
+        padding-left: 4px;
+      }
+    }
   }
-  .menu_icon{
-    height: 20px;
-    padding-right: 4px;
+}
+.relative-icon{
+  position: relative;
+}
+.bh{
+  display: none;
+  
+  @include mobile{
+    display: block;
+    position: absolute;
+    font-size: 15px;
+    width: 15px;
+    height: 14px;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    border-radius: 100%;
+    color: #fff;
+    text-align: center;
   }
+}
+.bars{
+  padding-left: 16px;
 }
 .logoSize{
   width: 128px;
@@ -32,19 +64,35 @@
     display: block;
   }
 }
+
+.menu-footer{
+  color:#fff;
+}
 // banner
 .banner{
-  img{
-    position: relative;
+  background: url(../perfume-week6/index1.jpg) no-repeat;
+  height: 870px;
+  background-position: center center;
+  background-size: 100%;
+  padding-top: 295px;
+  @include mobile{
+    background-size: 200%;
+    height: 480px;
+    background-position:left;
+    padding-top: 101px;
   }
   .banner_text_area{
     position: absolute;
-    top: 33%;
-    left: 55%;
+    right: 20%;
+    @include mobile{
+       right: 0;
+       height: 480px;
+    }
   }
 }
 .banner_text_area{
-  width: 445px;
+  max-width: 445px;
+  padding: 15px;
 }
 // banner_text
 .banner_h1_text{
@@ -64,6 +112,10 @@
 }
 .btn-white{
 	@include ovalButton(28px,60px,#fff);
+  &:hover{
+    background-color: $lighten_color;
+    border:none;
+  }
 }
 // main
 .main{
@@ -73,6 +125,9 @@
     li{
       display: flex;
       flex-direction: row-reverse;
+      @include mobile{
+        flex-wrap: wrap;
+      }
     }
   }
   .row-direction{
@@ -83,6 +138,9 @@
 // main_img
 .main_img{
   width: 555px;
+  @include mobile{
+    width: 345px;
+  }
 }
 // main_text
 .productIntroduction_text{
@@ -103,7 +161,7 @@
   }
   .more{
     @include text(16px,24px);
-    color: #AC8A46;
+    color: $lighten_color;
     font-weight: 600;
   }
   .detail_text{
@@ -123,20 +181,29 @@
   .btn-black{
     margin-top: 8px;
     @include ovalButton(20px,66px,#000);
+    &:hover{
+      background-color: #000;
+      color: #fff;
+    }
   }
 }
 //product display
 .container-gray{
   background-color: $product_list_background-color;
 }
-.productDisplay{
-  
 
-  ul{
+ 
+  .productDisplay{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1140px;
     display: flex;
-    flex-direction: row;
     justify-content: center;
+    @include mobile{
+      flex-wrap: wrap;
+    }
     li{
+        width: 380px;
         padding: 40px 15px;
         @include mobile{
         padding-top: 15px;
@@ -144,13 +211,21 @@
         
       }
     }
-  }
 
+  .product1{
+    background-image: url(../perfume-week6/index6.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 540px;
+
+  }
+  .product2{
+    background-image: url(../perfume-week6/index7.png);
+    background-size: 350px 540px;
+    height: 540px;
+  }
 }
 .productCard{
-  img{
-    max-width: 350px;
-  }
   h2{
     @include text(24px,36px);
     font-weight: 600;
@@ -168,12 +243,12 @@
     }
   }
 }
-.soldOutProduct{
-  max-width: 350px;
-  height: 540px;
+.product3{
+  max-width: 380px;
+  //height: 540px;
   background-image: url(../perfume-week6/index8.png);
-  background-size: 350px;
-  .black-mask{
+  background-size: 350px 540px;
+  .soldOut-mask{
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,.3);
@@ -189,11 +264,20 @@
 .classicProduct_area{
   display: flex;
   justify-content: center;
+  @include mobile{
+    flex-wrap: wrap;
+  }
   .classicProduct_img{
     margin-right: 30px;
+    @include mobile{
+      margin-right: 0px;
+    }
   }
   .productIntroduction_text{
     margin: 82px 30px;
+    @include mobile{
+      margin: 8px 15px;
+    }
   }
 }
 .classicProduct_img{
@@ -201,10 +285,93 @@
   height: 520px;
   background-image: url(../perfume-week6/index9.jpg);
   background-size: 730px;
+  @include mobile{
+    background-position: -100px;
+  }
+  
 }
-// *{
-//   outline: 1px #000 dashed;
-// }
+//subscribe
+.promote-background{
+  height: 600px;
+  background-image: url(../perfume-week6/index10.png);
+  background-position: center;
+  padding-top: 300px;
+  padding-left: 21%;
+  @include mobile{
+    margin-right: auto;
+    margin-left: auto;
+    background-position: -650px;
+    background-size: 1920px 600px;
+    background-repeat: no-repeat;
+    // padding-left: 15px;
+    // padding-right: 15px;
+  }
+}
+.subscribeArea{
+  max-width: 350px;
+  h2{
+    margin-bottom: 20px;
+    @include text(32px,48px);
+    color: $header_color;
+    font-weight: 600;
+  }
+}
+.subscribe{
+  @include text(16px,60px);
+  border: 2px solid $darken_color;
+  margin-top: -1px;
+  display: flex;
+  justify-content: space-between;
+  .subscribe_input{
+    width: 100%;
+    color: $header_color;
+    padding-left: 16px;
+    background-color: #fff;
+  }
+  .subscribe_btn{
+    background-color: $darken_color;
+    color: $banner_color;
+    padding-left: 27px;
+    padding-right: 26px;
+    &:hover{
+      background-color: $lighten_color;
+    }
+  }
+}
+//footer
+.dark-background{
+  background-color: $darken_color;
+}
+.footer{
+  display: flex;
+  justify-content: space-between;
+}
+.copyright_area{
+  display: flex;
+  align-items: center;
+  p{
+    margin-left: 20px;
+    @include text(14px,21px);
+    color: $banner_color;
+  }
+}
+.menu-footer{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  li{
+    margin-left: 32px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    a{
+      text-decoration: none;
+      color: $banner_color;
+      @include text(20px,30px);
+    }
+  }
+}
+
+
 .m-tb-9{
   margin-top: 9px;
   margin-bottom: 9px;
@@ -214,4 +381,12 @@
 }
 .mb-60{
   margin-bottom: 60px;
+  @include mobile{
+    margin-bottom: 40px;
+  }
+}
+.mobile-none{
+  @include mobile{
+    display: none;
+  }
 }

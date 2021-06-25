@@ -61,11 +61,21 @@ img {
           box-sizing: border-box;
 }
 
+* {
+  outline: 1px black solid;
+}
+
+a {
+  color: #8D8D8D;
+  text-decoration: none;
+}
+
 .container {
   max-width: 1140px;
   padding-left: 15px;
   padding-right: 15px;
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .header {
@@ -80,26 +90,55 @@ img {
           align-items: center;
 }
 
-.menu {
-  color: #8D8D8D;
+.fuckyoubitch {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.menu li {
+.fuckyoubitch li a {
   padding-left: 32px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.menu .menu_icon {
-  height: 20px;
-  padding-right: 4px;
+.fuckyoubitch li a p {
+  padding-left: 4px;
+}
+
+.relative-icon {
+  position: relative;
+}
+
+.bh {
+  display: none;
+}
+
+@media (max-width: 375px) {
+  .bh {
+    display: block;
+    position: absolute;
+    font-size: 15px;
+    width: 15px;
+    height: 14px;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    border-radius: 100%;
+    color: #fff;
+    text-align: center;
+  }
+}
+
+.bars {
+  padding-left: 16px;
 }
 
 .logoSize {
@@ -116,18 +155,42 @@ img {
   }
 }
 
-.banner img {
-  position: relative;
+.menu-footer {
+  color: #fff;
+}
+
+.banner {
+  background: url(../perfume-week6/index1.jpg) no-repeat;
+  height: 870px;
+  background-position: center center;
+  background-size: 100%;
+  padding-top: 295px;
+}
+
+@media (max-width: 375px) {
+  .banner {
+    background-size: 200%;
+    height: 480px;
+    background-position: left;
+    padding-top: 101px;
+  }
 }
 
 .banner .banner_text_area {
   position: absolute;
-  top: 33%;
-  left: 55%;
+  right: 20%;
+}
+
+@media (max-width: 375px) {
+  .banner .banner_text_area {
+    right: 0;
+    height: 480px;
+  }
 }
 
 .banner_text_area {
-  width: 445px;
+  max-width: 445px;
+  padding: 15px;
 }
 
 .banner_h1_text {
@@ -167,6 +230,11 @@ img {
   font-weight: 600;
 }
 
+.btn-white:hover {
+  background-color: #AC8A46;
+  border: none;
+}
+
 .main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -187,6 +255,13 @@ img {
           flex-direction: row-reverse;
 }
 
+@media (max-width: 375px) {
+  .main ul li {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 .main .row-direction {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -196,6 +271,12 @@ img {
 
 .main_img {
   width: 555px;
+}
+
+@media (max-width: 375px) {
+  .main_img {
+    width: 345px;
+  }
 }
 
 .productIntroduction_text {
@@ -258,36 +339,57 @@ img {
   font-weight: 600;
 }
 
+.productIntroduction_text_step .btn-black:hover {
+  background-color: #000;
+  color: #fff;
+}
+
 .container-gray {
   background-color: #E0E0E0;
 }
 
-.productDisplay ul {
+.productDisplay {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1140px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-.productDisplay ul li {
+@media (max-width: 375px) {
+  .productDisplay {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.productDisplay li {
+  width: 380px;
   padding: 40px 15px;
 }
 
 @media (max-width: 375px) {
-  .productDisplay ul li {
+  .productDisplay li {
     padding-top: 15px;
     padding-bottom: 15px;
   }
 }
 
-.productCard img {
-  max-width: 350px;
+.productDisplay .product1 {
+  background-image: url(../perfume-week6/index6.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 540px;
+}
+
+.productDisplay .product2 {
+  background-image: url(../perfume-week6/index7.png);
+  background-size: 350px 540px;
+  height: 540px;
 }
 
 .productCard h2 {
@@ -314,20 +416,19 @@ img {
   text-decoration: line-through;
 }
 
-.soldOutProduct {
-  max-width: 350px;
-  height: 540px;
+.product3 {
+  max-width: 380px;
   background-image: url(../perfume-week6/index8.png);
-  background-size: 350px;
+  background-size: 350px 540px;
 }
 
-.soldOutProduct .black-mask {
+.product3 .soldOut-mask {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.3);
 }
 
-.soldOutProduct .black-mask p {
+.product3 .soldOut-mask p {
   font-size: 24px;
   line-height: 540px;
   color: #fff;
@@ -344,12 +445,31 @@ img {
           justify-content: center;
 }
 
+@media (max-width: 375px) {
+  .classicProduct_area {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 .classicProduct_area .classicProduct_img {
   margin-right: 30px;
 }
 
+@media (max-width: 375px) {
+  .classicProduct_area .classicProduct_img {
+    margin-right: 0px;
+  }
+}
+
 .classicProduct_area .productIntroduction_text {
   margin: 82px 30px;
+}
+
+@media (max-width: 375px) {
+  .classicProduct_area .productIntroduction_text {
+    margin: 8px 15px;
+  }
 }
 
 .classicProduct_img {
@@ -357,6 +477,127 @@ img {
   height: 520px;
   background-image: url(../perfume-week6/index9.jpg);
   background-size: 730px;
+}
+
+@media (max-width: 375px) {
+  .classicProduct_img {
+    background-position: -100px;
+  }
+}
+
+.promote-background {
+  height: 600px;
+  background-image: url(../perfume-week6/index10.png);
+  background-position: center;
+  padding-top: 300px;
+  padding-left: 21%;
+}
+
+@media (max-width: 375px) {
+  .promote-background {
+    margin-right: auto;
+    margin-left: auto;
+    background-position: -650px;
+    background-size: 1920px 600px;
+    background-repeat: no-repeat;
+  }
+}
+
+.subscribeArea {
+  max-width: 350px;
+}
+
+.subscribeArea h2 {
+  margin-bottom: 20px;
+  font-size: 32px;
+  line-height: 48px;
+  color: #8D8D8D;
+  font-weight: 600;
+}
+
+.subscribe {
+  font-size: 16px;
+  line-height: 60px;
+  border: 2px solid #916000;
+  margin-top: -1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.subscribe .subscribe_input {
+  width: 100%;
+  color: #8D8D8D;
+  padding-left: 16px;
+  background-color: #fff;
+}
+
+.subscribe .subscribe_btn {
+  background-color: #916000;
+  color: #FFF;
+  padding-left: 27px;
+  padding-right: 26px;
+}
+
+.subscribe .subscribe_btn:hover {
+  background-color: #AC8A46;
+}
+
+.dark-background {
+  background-color: #916000;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.copyright_area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.copyright_area p {
+  margin-left: 20px;
+  font-size: 14px;
+  line-height: 21px;
+  color: #FFF;
+}
+
+.menu-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu-footer li {
+  margin-left: 32px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.menu-footer li a {
+  text-decoration: none;
+  color: #FFF;
+  font-size: 20px;
+  line-height: 30px;
 }
 
 .m-tb-9 {
@@ -370,5 +611,17 @@ img {
 
 .mb-60 {
   margin-bottom: 60px;
+}
+
+@media (max-width: 375px) {
+  .mb-60 {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 375px) {
+  .mobile-none {
+    display: none;
+  }
 }
 /*# sourceMappingURL=all.css.map */
