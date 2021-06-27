@@ -1,6 +1,6 @@
-*{
-  outline: 1px black solid;
-}
+// *{
+//   outline: 1px black solid;
+// }
 a{
   color:  $header_color;
   text-decoration: none;
@@ -11,6 +11,11 @@ a{
   padding-right: 15px;
   margin-right: auto;
   margin-left: auto;
+}
+//wh-255-255
+.wh-255-255{
+  width: 255px;
+  height: 255px;
 }
 // header
 .header{
@@ -225,7 +230,7 @@ a{
     height: 540px;
   }
 }
-.productCard{
+.productCard_text{
   h2{
     @include text(24px,36px);
     font-weight: 600;
@@ -303,12 +308,18 @@ a{
     background-position: -650px;
     background-size: 1920px 600px;
     background-repeat: no-repeat;
-    // padding-left: 15px;
-    // padding-right: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 .subscribeArea{
+  margin-left: 0;
   max-width: 350px;
+  margin-right: auto;
+  @include mobile{
+    margin-left: auto;
+  }
+  
   h2{
     margin-bottom: 20px;
     @include text(32px,48px);
@@ -359,10 +370,10 @@ a{
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
   li{
-    margin-left: 32px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    padding-left: 32px;
     a{
       text-decoration: none;
       color: $banner_color;
@@ -389,4 +400,17 @@ a{
   @include mobile{
     display: none;
   }
+}
+.jc-fs{
+  justify-content: flex-start;
+}
+.pr-28{
+  padding-right: 28px !important;
+}
+.pt-b-14{
+  padding-top: 14px !important;
+  padding-bottom: 14px !important;
+}
+.pl-0{
+  padding-left: 0 !important;
 }
