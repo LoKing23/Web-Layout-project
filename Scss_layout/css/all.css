@@ -271,7 +271,7 @@ a {
 }
 
 .main_img {
-  width: 555px;
+  width: 50%;
 }
 
 @media (max-width: 375px) {
