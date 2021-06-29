@@ -1,5 +1,6 @@
 //全域變數
 //data
+
 let data =[
   {
     complete:false,
@@ -12,6 +13,7 @@ let data =[
     content: '練習寫to-do list'
   }
 ];
+const cancel = document.querySelectorAll('.cancel');
 //pagination狀態
 let paginationStatus = 'all';
 
@@ -83,26 +85,55 @@ function renderData(show=paginationStatus){
   if(show=="all"){
     data.forEach(function(item,index){
       if(item.complete){
-        str+=`<li><i class="fas fa-check" data-num="${index}"></i><p class="line-through color-lighten-black">${item.content}</p></li>`;
+        str+=`<li>
+                <i class="fas fa-check" data-num="${index}"></i>
+                <div class="jcsb">
+                  <p class="line-through color-lighten-black">${item.content}</p>
+                  <div class="cancel" data-num="${index}">
+                    <img class='cancelClick'data-num="${index}" src="cancel.jpeg" alt="cancel">
+                  </div>
+                </div>
+              </li>`;
       }else{
-        str+=`<li><div class="checkBox" data-num="${index}"></div><p>${item.content}</p></li>`;
+        str+=`<li>
+                <div class="checkBox" data-num="${index}"></div>
+                <div class="jcsb">
+                  <p>${item.content}</p>
+                  <div class="cancel" data-num="${index}">
+                      <img class='cancelClick'data-num="${index}" src="cancel.jpeg" alt="cancel">
+                  </div>
+                </div>
+              </li>`;
       }
       });
   }else if(show=='todo'){
     data.forEach(function(item,index){
       if(!item.complete){
-        str+=`<li><div class="checkBox" data-num="${index}"></div><p>${item.content}</p></li>`;
+        str+=`<li>
+                <div class="checkBox" data-num="${index}"></div>
+                  <div class="jcsb">
+                    <p>${item.content}</p>
+                    <div class="cancel" data-num="${index}">
+                      <img class='cancelClick'data-num="${index}" src="cancel.jpeg" alt="cancel">
+                    </div>
+                  </div>
+              </li>`;
       }
       console.log(str);
     })
   }else if(show=='completed'){
     data.forEach(function(item,index){
       if(item.complete){
-        str+=`<li><i class="fas fa-check" data-num="${index}"></i><p class="line-through color-lighten-black">${item.content}</p></li>`
+        str+=`<li>
+                <i class="fas fa-check" data-num="${index}"></i>
+                <div class="jcsb">
+                  <p class="line-through color-lighten-black">${item.content}</p>
+                  <div class="cancel"><img  class='cancelClick'data-num="${index}" src="cancel.jpeg" alt="cancel"></div>
+                </div>
+              </li>`
       }
     })
   }
-  console.log(str);
   renderTodoNum();
   list.innerHTML = str;
 }
@@ -127,14 +158,28 @@ function accTodo(){
   })
   return num;
 }
+//點擊照片刪除項目事件
+list.addEventListener('click',function(e){
+  let cancelImg = e.target;
+  if(cancelImg.getAttribute('class')=='cancelClick'){
+    let bye = -1;
+    bye = cancelImg.getAttribute('data-num')
+    data.splice(bye,1);
+    renderData();
+  }
+})
+
 renderData();
 //mouseenter事件
-const cancel = document.querySelector('.cancel');
+
+/*//我投降 
 cancel.addEventListener('mouseenter',function(e){
-  cancel.innerHTML=`<img src="cancel.jpeg" alt="cancel">`;
+  console.log(e.target.getAttribute('data-num'));
+  //cancel.innerHTML=`<img src="cancel.jpeg" alt="cancel">`;
 })
 //mouseleave事件
 cancel.addEventListener('mouseleave',function(e){
-  cancel.innerHTML="";
-})
+  console.log(e.target.getAttribute('data-num'));
+  //cancel.innerHTML="";
+}) */
 

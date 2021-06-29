@@ -108,6 +108,10 @@ body {
   color: rgba(51, 51, 51, 0.3) !important;
 }
 
+* {
+  outline: 1px solid red;
+}
+
 .background {
   background-image: linear-gradient(174deg, #FFD370 2%, #FFD370 46%, #FFFFFF 46%, #FFFFFF 100%, #E8E8E8 100%);
 }
@@ -134,14 +138,15 @@ body {
 }
 
 .addTask_position p {
-  width: 40px;
-  line-height: 40px;
+  width: 35px;
+  line-height: 35px;
   position: absolute;
   top: 1px;
   right: 4px;
 }
 
 .plusBtn {
+  margin-top: 2px;
   font-size: 32px;
   color: #FFFFFF;
   text-align: center;
@@ -176,8 +181,8 @@ body {
 }
 
 .cancel {
-  width: 48px;
-  height: 48px;
+  width: 20px;
+  height: 20px;
 }
 
 .cancel img {
@@ -192,6 +197,7 @@ body {
 }
 
 .listStyle li {
+  width: 100%;
   padding-top: 17px;
   padding-bottom: 17px;
   border-bottom: 1px solid #EFEFEF;
@@ -235,6 +241,16 @@ body {
   font-size: 16px;
   color: #333333;
   letter-spacing: 0.62px;
+}
+
+.jcsb {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .status {
