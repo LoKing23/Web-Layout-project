@@ -1,3 +1,4 @@
+
 .background{
   background-image: linear-gradient(174deg, #FFD370 2%, #FFD370 46%, #FFFFFF 46%, #FFFFFF 100%, #E8E8E8 100%);
 }
@@ -45,14 +46,28 @@
     width: 33.3333%;
     // padding-top: 16px;
     // padding-bottom: 16px;
-    border-bottom: 2px solid #9F9A91;
+    
     h2{
       font-size: 14px;
       line-height: 52px;
       color: #9F9A91;
       letter-spacing: 0.7px;
+      border-bottom: 2px solid #9F9A91;
     }
   }
+}
+.cancel{
+  width: 48px;
+  height: 48px;
+  img{
+    width: 20px;
+    height: 20px;
+  }
+}
+.clickStyle{
+  font-weight: 600 !important;
+  color: #333333 !important;
+  border-bottom: 2px solid #333333 !important;
 }
 .listStyle{
   li{

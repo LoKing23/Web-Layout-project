@@ -3,18 +3,24 @@
 let data =[
   {
     complete:false,
-    content: '早上掃地'
+    content: '消滅蜘蛛'
   },{
     complete: true,
-    content: '晚上吃飽飽'
+    content: '打LOL'
   },{
-    complete: false,
-    content: '下午睡覺'
+    complete: true,
+    content: '練習寫to-do list'
   }
 ];
 //pagination狀態
 let paginationStatus = 'all';
 
+const todoNum = document.querySelector('.todoNum');
+//將計算後的待完成渲染至HTML
+function renderTodoNum(){
+  let num = accTodo();
+  todoNum.textContent = `${num} 個待完成項目`
+}
 //click事件
 //list 完成代辦事項
 const list = document.querySelector('.list');
@@ -45,13 +51,22 @@ const showCompleted = document.querySelector('.showCompleted');
 const showAll = document.querySelector('.showAll');
 showList.addEventListener('click',function(e){
   let status = e.target.getAttribute('class');
+  let addNewClass = `clickStyle `;
+  addNewClass += status;
   if(status == 'showAll'){
     paginationStatus = 'all';
+    showTodo.setAttribute('class','showTodo');
+    showCompleted.setAttribute('class','showCompleted');
   }else if(status == 'showTodo'){
     paginationStatus = 'todo';
+    showCompleted.setAttribute('class','showCompleted');
+    showAll.setAttribute('class','showAll');
   }else if(status == 'showCompleted'){
     paginationStatus =  'completed';
+    showTodo.setAttribute('class','showTodo');
+    showAll.setAttribute('class','showAll');
   }
+  e.target.setAttribute('class',addNewClass);
   renderData();
 })
 //cleanCompleted 清除已完成
@@ -60,35 +75,36 @@ cleanCompleted.addEventListener('click',function(e){
   cleanCompletedData();
   renderData();
 })
-//function()
+
+
 // 將data渲染至網頁
 function renderData(show=paginationStatus){
   let str='';
   if(show=="all"){
     data.forEach(function(item,index){
       if(item.complete){
-        str+=`<li><i class="fas fa-check" data-num="${index}"></i><p class="line-through color-lighten-black">${item.content}</p><div class="cancel_area"></div></li>`;
+        str+=`<li><i class="fas fa-check" data-num="${index}"></i><p class="line-through color-lighten-black">${item.content}</p></li>`;
       }else{
-        str+=`<li><div class="checkBox" data-num="${index}"></div><p>${item.content}</p><div class="cancel_area"></div></li>`;
+        str+=`<li><div class="checkBox" data-num="${index}"></div><p>${item.content}</p></li>`;
       }
       });
   }else if(show=='todo'){
     data.forEach(function(item,index){
       if(!item.complete){
-        str+=`<li><div class="checkBox" data-num="${index}"></div><p>${item.content}</p><div class="cancel_area"></div></li>`;
+        str+=`<li><div class="checkBox" data-num="${index}"></div><p>${item.content}</p></li>`;
       }
       console.log(str);
     })
   }else if(show=='completed'){
     data.forEach(function(item,index){
       if(item.complete){
-        str+=`<li><i class="fas fa-check" data-num="${index}"></i><p class="line-through color-lighten-black">${item.content}</p><div class="cancel_area"></div></li>`
+        str+=`<li><i class="fas fa-check" data-num="${index}"></i><p class="line-through color-lighten-black">${item.content}</p></li>`
       }
     })
   }
-
-  list.innerHTML = str;
+  console.log(str);
   renderTodoNum();
+  list.innerHTML = str;
 }
 //清除data內已完成項目
 function cleanCompletedData(){
@@ -101,7 +117,7 @@ function cleanCompletedData(){
   data=dota;
 }
 //計算有幾個待完成項目
-const todoNum = document.querySelector('.todoNum');
+
 function accTodo(){
   let num = 0;
   data.forEach(function(item,index){
@@ -111,10 +127,14 @@ function accTodo(){
   })
   return num;
 }
-//將計算後的待完成渲染至HTML
-function renderTodoNum(){
-  let num = accTodo();
-  todoNum.textContent = `${num} 個待完成項目`
-}
 renderData();
+//mouseenter事件
+const cancel = document.querySelector('.cancel');
+cancel.addEventListener('mouseenter',function(e){
+  cancel.innerHTML=`<img src="cancel.jpeg" alt="cancel">`;
+})
+//mouseleave事件
+cancel.addEventListener('mouseleave',function(e){
+  cancel.innerHTML="";
+})
 

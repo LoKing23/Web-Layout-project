@@ -165,7 +165,6 @@ body {
 
 .pagination li {
   width: 33.3333%;
-  border-bottom: 2px solid #9F9A91;
 }
 
 .pagination li h2 {
@@ -173,6 +172,23 @@ body {
   line-height: 52px;
   color: #9F9A91;
   letter-spacing: 0.7px;
+  border-bottom: 2px solid #9F9A91;
+}
+
+.cancel {
+  width: 48px;
+  height: 48px;
+}
+
+.cancel img {
+  width: 20px;
+  height: 20px;
+}
+
+.clickStyle {
+  font-weight: 600 !important;
+  color: #333333 !important;
+  border-bottom: 2px solid #333333 !important;
 }
 
 .listStyle li {
