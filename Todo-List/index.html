@@ -6,19 +6,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TODO LIST</title>
   <link rel="stylesheet" href="css/all.css">
+  <script src="https://kit.fontawesome.com/3a056adcda.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<div class="background">
+<div class="background pt-b-6">
   <div class="container">
-    <h1>TODO LIST</h1>
-    <div>
-      <input type="text" placeholder="新增代辦事項">
-      <p>+</p>
+    <h1 class="h1">TODO LIST</h1>
+    <div class="mb-1 addTask_position">
+      <input type="text" placeholder="新增代辦事項" class="p12-24 w100p listInput">
+      <p class="plusBtn">+</p>
     </div>
     
+    <div class="container list-border pb-4">
+      <ul class="pagination showList">
+        <li><h2 class="showAll">全部</h2></li>
+        <li><h2 class="showTodo">待完成</h2></li>
+        <li><h2 class="showCompleted">已完成</h2></li>
+      </ul>
+
+      <ul class="list listStyle mb-3 pl-r-3"> 
+      </ul>
+      <!-- 這裡等清除資料弄好再來 -->
+      <div class="status pl-r-3">
+        <p class="todoNum"></p>
+        <p class="cleanCompleted">清除已完成項目</p>
+      </div>
+    </div>
   </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script src="all.js"></script>
+<script src="js/all.js"></script>
 </body>
 </html>

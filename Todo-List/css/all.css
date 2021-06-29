@@ -60,4 +60,184 @@ img {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+
+body {
+  font-size: 16px;
+  font-family: NotoSansCJKtc-Medium;
+}
+
+.pt-b-6 {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.p12-24 {
+  padding: 12px 24px;
+}
+
+.mb-1 {
+  margin-bottom: 8px;
+}
+
+.mb-3 {
+  margin-bottom: 24px;
+}
+
+.mb-4 {
+  margin-bottom: 32px;
+}
+
+.pb-4 {
+  padding-bottom: 32px;
+}
+
+.pl-r-3 {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.w100p {
+  width: 100%;
+}
+
+.line-through {
+  text-decoration: line-through !important;
+}
+
+.color-lighten-black {
+  color: rgba(51, 51, 51, 0.3) !important;
+}
+
+.background {
+  background-image: linear-gradient(174deg, #FFD370 2%, #FFD370 46%, #FFFFFF 46%, #FFFFFF 100%, #E8E8E8 100%);
+}
+
+.container {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.h1 {
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 26px;
+  font-family: BalooTamma2-Bold;
+  font-size: 48px;
+  color: #333333;
+  letter-spacing: 8.75px;
+  text-align: center;
+}
+
+.addTask_position {
+  position: relative;
+}
+
+.addTask_position p {
+  width: 40px;
+  line-height: 40px;
+  position: absolute;
+  top: 1px;
+  right: 4px;
+}
+
+.plusBtn {
+  font-size: 32px;
+  color: #FFFFFF;
+  text-align: center;
+  background: #333333;
+  border-radius: 10px;
+}
+
+.list-border {
+  background: #FFFFFF;
+  -webkit-box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+}
+
+.pagination li {
+  width: 33.3333%;
+  border-bottom: 2px solid #9F9A91;
+}
+
+.pagination li h2 {
+  font-size: 14px;
+  line-height: 52px;
+  color: #9F9A91;
+  letter-spacing: 0.7px;
+}
+
+.listStyle li {
+  padding-top: 17px;
+  padding-bottom: 17px;
+  border-bottom: 1px solid #EFEFEF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.listStyle li .checkBox {
+  margin-right: 16px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #333333;
+  border-radius: 5px;
+  border-radius: 5px;
+}
+
+.listStyle li .cancel_area {
+  width: 16px;
+  height: 16px;
+}
+
+.listStyle li .cancel_area img {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+.listStyle li .cancel_area img:hover {
+  display: none;
+}
+
+.listStyle li i {
+  margin-right: 18.8px;
+  color: #FFD370;
+  width: 13px;
+  height: 9px;
+}
+
+.listStyle li p {
+  font-size: 16px;
+  color: #333333;
+  letter-spacing: 0.62px;
+}
+
+.status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cleanCompleted {
+  font-size: 14px;
+  color: #9F9A91;
+  letter-spacing: 0.7px;
+  margin-right: 23px;
+}
+
+.cleanCompleted:hover {
+  color: #000;
+}
 /*# sourceMappingURL=all.css.map */
