@@ -9,8 +9,20 @@ let data =[
     complete: true,
     content: '打LOL'
   },{
+    complete: false,
+    content: '爬鑽石'
+  },{
+    complete: true,
+    content: '檢舉嘴砲隊友'
+  },{
     complete: true,
     content: '練習寫to-do list'
+  },{
+    complete: true,
+    content: '早起小美配孫小美'
+  },{
+    complete: false,
+    content: '欣宜是阿胖'
   }
 ];
 const cancel = document.querySelectorAll('.cancel');
