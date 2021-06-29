@@ -55,6 +55,7 @@ plusBtn.addEventListener('click',function(e){
   }
   let bj4 = {complete:false};
   bj4.content = listInput.value;
+  listInput.value="";
   data.push(bj4);
   renderData();
 })
